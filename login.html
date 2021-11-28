@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>::-webkit-scrollbar{
+        display: none !important;
+    }
+
+ .card{
+     box-shadow: none;
+     width:95vw
+
+ }   
+
+    .login{
+        height:100vh;
+        background:rgb(255, 255, 255);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+ 
+
+    .cust-button{
+        background:#008485;
+        box-shadow:none !important;
+        border-radius:7px;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="login" id="login-content">
+        <div>
+            <img style="display:block;margin:auto" width=200 src="assets/logo-vax.png" alt="">
+            <div class="card">
+                <div class="card-content">
+                    <form action="">
+                        <div class="input-field">
+                            <input placeholder="Omang / Passport #" id="first_name" type="number" class="validate">
+                          </div>
+
+                          <div class="input-field">
+                            <input placeholder="Password" id="first_name" type="password" class="validate">
+                          </div>
+
+                          <a class="btn cust-button" id="login-button">login</a>
+                          
+                          <a style="display:block;margin-top:10px;color:#5EC5CB" href="">I don't have an account!</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+</body>
+
+</html>

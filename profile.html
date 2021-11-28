@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+    <style>::-webkit-scrollbar{
+        display: none !important;
+    }
+
+    #vax-info:hover{
+        cursor: pointer;
+        color: teal;
+        transition: ease-in .5s;
+    }
+    .restrict-card-height{
+        min-height: 300px !important;
+    }
+    .sm-text{
+        color:grey;
+        font-weight:bold;
+    }
+    .qr-image{
+        width:100%;
+        margin-top:10px;
+        border-radius:20px;
+    }
+
+    .title{
+        font-weight:900;
+        font-size:16px;
+    }
+    .name{
+        font-weight:900;
+        font-size:20px;
+    }
+
+    .buttons{
+        display:block;
+        background:rgb(240, 240, 240);
+        margin-top:5px;
+        padding:15px;
+        border-radius:15px;
+        color:rgb(63, 63, 63);
+        font-weight:bold;
+        text-align: center;
+    }
+
+    .card{
+        border-radius:20px;
+        box-shadow:none;
+    }
+
+
+    .cust-button{
+        background:#008485;
+        box-shadow:none !important;
+        border-radius:7px;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="white" id="nav-content">
+                <div class="nav-wrapper">
+                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="black-text material-icons">apps</i></a>
+                    <a href="#" class="brand-logo"> <img style="margin-top:4px" width=130 src="assets/logo-vax.png" alt=""></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">JavaScript</a></li>
+                    </ul>
+                </div>
+        </nav>
+
+        <ul id="slide-out" class="sidenav">
+            <li class="sidenav-close">
+                <a href="#" class="right"><i class="black-text material-icons">close</i></a>
+            </li>
+            <li class="sidenav-close">
+                <div class="user-view">
+                    <div class="background">
+                        <img src="https://thumbs.dreamstime.com/b/old-white-wall-background-texture-dark-blocks-brick-114096652.jpg">
+                    </div>
+                    <a href="#user"><img class="circle" src="https://cdn-icons-png.flaticon.com/512/147/147140.png"></a>
+                    <a href="#name"><span class="white-text name">Rudisang Morake</span></a>
+                    <a href="#email"><span class="white-text email">rmorake@gmail.com</span></a>
+                </div>
+            </li>
+            <li><a href="#!"><i class="material-icons">home</i>Main</a></li>
+            <li><a href="#!"><i class="material-icons">account_circle</i>Profile</a></li>
+            <li><a href="#!"><i class="material-icons">info</i>Vaccine Info</a></li>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+            
+        </ul>
+
+    </header>
+    <section class="container" id="main-content">
+        <div class="card">
+            <div class="card-content">
+                <p class="title">Vaccination Status <span id="vax-info" class="modal-trigger right" href="#modal1">  <i class="material-icons">info</i></span></p>
+                <span><i class="material-icons green-text">check_circle</i></span>
+            </div>
+        </div>
+
+        <div id="modal1" class="modal bottom-sheet">
+            <div class="modal-content">
+              <h4 class="name">Vaccination Status Key</h4>
+              <p class="sm-text"><span><i class="material-icons green-text">check_circle</i></span> Fully Vaccinated</p>
+              <p class="sm-text"><span><i class="material-icons yellow-text">remove_circle</i></span> First Dose</p>
+              <p class="sm-text"><span><i class="material-icons red-text">report</i></span> Not Vaccinated</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">close</a>
+            </div>
+          </div>
+        
+
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="card restrict-card-height" >
+                    <div class="card-content">
+                        <p class="name">First Dose</p>
+                        <p class="sm-text">J&amp;J</p>
+                        <br>
+                        <hr>
+                        <p><span class="title">Date Administered: </span><span class="sm-text">05/08/21</span></p>
+                        <hr>
+                        <p><span class="title">Batch No: </span><span class="sm-text">T1 481</span></p>
+                        <p><span class="title">Name of Provider: </span><span class="sm-text">Daniel Mokento</span></p>
+                        <p><span class="title">Expires: </span><span class="sm-text">05/08/23</span></p>
+
+
+
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card restrict-card-height" >
+                    <div class="card-content">
+                        <p class="name">Second Dose</p>
+                        <br>
+                        <hr>
+                        <div style="height:200px;display:flex;align-items: center;justify-content: center;">
+                            <p class="name grey-text">N/A</p>
+                        </div>
+        
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card restrict-card-height" >
+                    <div class="card-content">
+                        <p class="name">Booster</p>
+                        <br>
+                        <hr>
+                        <div style="height:200px;display:flex;align-items: center;justify-content: center;">
+                            <p class="name grey-text">N/A</p>
+                        </div>
+        
+                    </div>
+                </div>
+              </div>
+              ...
+            </div>
+            <div class="swiper-pagination"></div>
+            
+          </div>
+
+          <div class="card" >
+            <div class="card-content">
+                <p class="name">Rudisang K Morake</p>
+
+                <br>
+                <hr>
+                <p><span class="title">Registration Number: </span><span class="sm-text">05-08-21-876768</span></p>
+                <p><span class="title">Date Administered: </span><span class="sm-text">05/08/21</span></p>
+                <hr>
+                <p><span class="title">Omang/Passport #: </span><span class="sm-text">445612234</span></p>
+                <p><span class="title">Date of Birth: </span><span class="sm-text">07/03/1923</span></p>
+                <p><span class="title">Nationality: </span><span class="sm-text">Motswana</span></p>
+                <p><span class="title">District: </span><span class="sm-text">Greater Gaborone</span></p>
+                <p><span class="title">Village/Town: </span><span class="sm-text">Gaborone</span></p>
+                <p><span class="title">Vaccination Facility: </span><span class="sm-text">Taung Clinic</span></p>
+                <p><span class="title">Cell Phone: </span><span class="sm-text">+267-8-878-878</span></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 1.1,
+  spaceBetween: 10,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
+</body>
+
+</html>

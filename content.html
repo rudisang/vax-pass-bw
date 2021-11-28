@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>::-webkit-scrollbar{
+        display: none !important;
+    }
+    .qr-image{
+        width:100%;
+        margin-top:10px;
+        border-radius:20px;
+    }
+    .name{
+        font-weight:900;
+        font-size:20px;
+    }
+
+    .buttons{
+        display:block;
+        background:rgb(240, 240, 240);
+        margin-top:5px;
+        padding:15px;
+        border-radius:15px;
+        color:rgb(63, 63, 63);
+        font-weight:bold;
+        text-align: center;
+    }
+
+    .card{
+        border-radius:20px;
+        box-shadow:none;
+    }
+
+
+    .cust-button{
+        background:#008485;
+        box-shadow:none !important;
+        border-radius:7px;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="white" id="nav-content">
+                <div class="nav-wrapper">
+                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="black-text material-icons">apps</i></a>
+                    <a href="#" class="brand-logo"> <img style="margin-top:4px" width=130 src="assets/logo-vax.png" alt=""></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">JavaScript</a></li>
+                    </ul>
+                </div>
+        </nav>
+
+        <ul id="slide-out" class="sidenav">
+            <li class="sidenav-close">
+                <a href="#" class="right"><i class="black-text material-icons">close</i></a>
+            </li>
+            <li class="sidenav-close">
+                <div class="user-view">
+                    <div class="background">
+                        <img src="https://thumbs.dreamstime.com/b/old-white-wall-background-texture-dark-blocks-brick-114096652.jpg">
+                    </div>
+                    <a href="#user"><img class="circle" src="https://cdn-icons-png.flaticon.com/512/147/147140.png"></a>
+                    <a href="#name"><span class="white-text name">Rudisang Morake</span></a>
+                    <a href="#email"><span class="white-text email">rmorake@gmail.com</span></a>
+                </div>
+            </li>
+            <li><a href="#!"><i class="material-icons">home</i>Main</a></li>
+            <li><a href="#!"><i class="material-icons">account_circle</i>Profile</a></li>
+            <li><a href="#!"><i class="material-icons">info</i>Vaccine Info</a></li>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+            
+        </ul>
+
+    </header>
+    <section class="container" id="main-content">
+        <img class="qr-image" src="assets/qr-code.png" alt="">
+        
+        <div class="card">
+            <div class="card-content">
+                <p class="name">Rudisang Morake</p>
+                <br>
+                <a class="buttons">My Profile</a>
+                <a href="" class="buttons">Vaccine Info</a>
+                <a href="" class="buttons teal white-text">Emergency Line</a>
+                <a href="" class="buttons">Community</a>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
