@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .cust-card {
             background: rgb(240, 240, 240);
             box-shadow: none;
@@ -39,6 +42,10 @@
 
         }
 
+        .selected{
+            text-decoration: underline;
+        }
+
         iframe {
             border-radius: 5px;
             background: rgb(245, 245, 245);
@@ -55,27 +62,84 @@
             height: 80vh;
 
         }
+
+        .nav-links{
+            color: rgb(19, 19, 19);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .nav-links:hover{
+            background-color: rgba(255, 0, 0, 0);
+            text-decoration-color: #008687;
+            color:#008687;
+            transition: ease-in-out .3s;
+        }
+
+        .bg{
+            background-color: #fdfdfd;
+            opacity: 0.8;
+            background-image: radial-gradient(#444cf7 0.5px, #fdfdfd 0.5px);
+            background-size: 10px 10px;
+        }
+
+        .navbar-scrolled{
+            background-color: rgb(255, 255, 255);
+            transition: ease-in-out 3s;
+        }
+
+        .white-bg{
+            background-color: #fdfdfd;
+      
+            background-image: radial-gradient(#444cf7 0.5px, #fdfdfd 0.5px);
+            background-size: 10px 10px;
+            transition: ease-in-out 1s;
+        }
+
+        .down-arrow{
+            margin-top:10px;
+            margin-left:25px;
+            z-index:9;
+            top:0px;
+            opacity:1;
+            width: 40px;
+            position:relative;
+            animation-name: downarrows;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: 4;
+            }
+
+            @keyframes downarrows {
+            0%   {top:0px;}
+            25%  {top:15px;}
+            50%  {top:25px;}
+            100% {top:35px;opacity:0;transform: scale(1.4);}
+            }
     </style>
 </head>
 
-<body>
+<body id="body">
     <header>
-        <nav class="white" style="box-shadow:none">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i
-                            class="material-icons black-text">apps</i></a>
-                    <a href="#" class="brand-logo"><img style="margin-top:5px" width=150 src="assets/logo-vax.png"
-                            alt=""></a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li class="active"><a class="grey-text" href="">Home</a></li>
-                        <li><a class="grey-text" href="#demo">Demo</a></li>
-                        <li><a class="grey-text" href=""></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
+        <div class="navbar-fixed">
+            <nav id="navbar" class="white-bg" style="box-shadow:none">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#" data-target="slide-out" class="sidenav-trigger"><i
+                                class="material-icons black-text">apps</i></a>
+                        <a href="#" class="brand-logo"><img style="margin-top:5px" width=150 src="assets/logo-vax.png"
+                                alt=""></a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li class="selected"><a class="nav-links" href="">Home</a></li>
+                            <li><a class="nav-links" href="#demo">Demo</a></li>
+                            <li><a class="grey-text" href=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
         <ul id="slide-out" class="sidenav">
             <li >
                 <div class="user-view" style="height:200px">
@@ -93,19 +157,27 @@
         </ul>
 
     </header>
-    <section class="header">
+    <section class="header bg">
         <div class="row">
-            <div class="col s12 l6" style="height:570px;display:flex;align-items: center;justify-content: center;">
-                <div>
-                    <h3 style="font-weight:900;">WELCOME TO BW VAX PASS</h3>
-                    <p style="font-weight: 600;font-size:18px;text-transform: uppercase;">Botswana Digital Vaccination
-                        Card</p>
-                    <a href="" class="btn">Explore</a>
+            <div class="container">
+                <div class="col s12 l6" style="height:570px;display:flex;align-items: center;justify-content: center;">
+                    <div>
+                        <h3 style="font-weight:900;">WELCOME TO BW VAX PASS</h3>
+                        <p style="font-weight: 600;font-size:18px;text-transform: uppercase;">Botswana Digital Vaccination
+                            Card</p>
+                        <a href="" class="btn z-depth-0" style="border-radius:10px">Explore</a>
+                        <br>
+                        <a href="#demo" class=""><img
+                            alt="Chevoron Down"
+                            class="down-arrow"
+                            src="/assets/down.svg"
+                          /></a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col l6 hide-on-med-and-down" >
-                <img style="width:100%" src="assets/bg-header.png" alt="">
+    
+                <div class="col l6 hide-on-med-and-down" style="height:570px;display:flex;align-items: center;justify-content: center;" >
+                    <img style="width:100%;display:block;margin:auto" src="assets/bg-header.png" alt="">
+                </div>
             </div>
         </div>
 
@@ -210,6 +282,24 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="app.js"></script>
+    <script>
+
+        //listen for scroll event   
+        window.addEventListener("scroll", function() {
+            //if the window has been scrolled more than 100px from top
+            if (window.scrollY > 200) {
+                //add class to navbar
+                document.getElementById("navbar").classList.remove("white-bg");
+                document.getElementById("navbar").classList.add("navbar-scrolled");
+            } else {
+                //remove class from navbar
+                document.getElementById("navbar").classList.remove("navbar-scrolled");
+                document.getElementById("navbar").classList.add("white-bg");
+
+
+            }
+        });
+    </script>
 </body>
 
 </html>
